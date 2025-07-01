@@ -4,7 +4,8 @@ import plotly.express as px
 
 # Load the CSV data
 # Load and clean data
-df = pd.read_csv('final_df.csv')
+url = 'https://raw.githubusercontent.com/Ahtsham-pyds/Elect_analysis/refs/heads/main/Elect/final_df.csv'
+df = pd.read_csv(url)
 df.columns = df.columns.str.strip()
 
 
