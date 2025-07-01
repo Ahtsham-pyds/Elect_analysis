@@ -4,8 +4,9 @@ import plotly.express as px
 
 # Load the CSV data
 # Load and clean data
-df = pd.read_csv('/Users/A200154990/ELECT_ANALYSIS/Elect/final_df.csv')
+df = pd.read_csv('final_df.csv')
 df.columns = df.columns.str.strip()
+
 
 # Clean round
 df['Round'] = pd.to_numeric(df['Round'], errors='coerce')
@@ -143,3 +144,5 @@ fig_rank = px.line(
 )
 fig_rank.update_yaxes(autorange="reversed")
 st.plotly_chart(fig_rank)
+
+
